@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:posty_app/main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import './screens/login.dart';
@@ -30,13 +31,15 @@ class _Splash_ScreenState extends State<Splash_Screen> {
     return Scaffold(
       backgroundColor: HexColor('#4A5568'),
       appBar: AppBar(
+        systemOverlayStyle:
+            const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
         title: Padding(
           padding: const EdgeInsets.all(150), // set the desired padding here
-          child: Image.asset(
-            'assets/images/logo.png',
-            width: 80,
-            height: 80,
-          ),
+          // child: Image.asset(
+          //   'assets/images/logo.png',
+          //   width: 80,
+          //   height: 80,
+          // ),
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
